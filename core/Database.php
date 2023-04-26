@@ -1,5 +1,5 @@
 <?php
-class Database{
+class erDatabase{
 	// Biến lưu trữ kết nối
 	private $__conn;
 	

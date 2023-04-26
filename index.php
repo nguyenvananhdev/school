@@ -5,7 +5,8 @@
     $url_s = explode('=',$url);
     $url_controller =end($url_s); 
     $url_controller_ok = explode('/',$url_controller);
-    var_dump($url_controller_ok);
+    $domain = "schoolsystem";
+    $url_main = $_SERVER['DOCUMENT_ROOT'].'/'.$domain;
 // Kiểm tra controller đang truy cập 
     if(!$url_controller_ok[0]){
         echo 'Controller home';
@@ -22,9 +23,19 @@
                 include_once('controllers/errorC.php');
             }
         }
-        else if(isset($url_controller_ok[0] && !isset($url_controller_ok[1])))
+        else if($url_controller_ok[0])
         {
-
+            if(file_exists('controllers/'.$url_controller_ok[0].'/index.php'))
+            {
+                include_once('controllers/'.$url_controller_ok[0].'/index.php');
+            }
+            else
+            {
+                include_once('controllers/errorC.php');
+            }
+        }
+        else{
+            include_once('controllers/errorC.php');
         }
         
     }
