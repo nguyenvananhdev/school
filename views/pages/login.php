@@ -74,10 +74,11 @@ body {
 
 .wrapper .btn {
     box-shadow: none;
+    border:none;
     width: 100%;
     height: 40px;
-    background-color: #03A9F4;
-    color: #fff;
+    background-color: #086fb2;
+    color: white;
     border-radius: 25px;
     box-shadow: 3px 3px 3px #b1b1b1,
         -3px -3px 3px #fff;
@@ -91,7 +92,7 @@ body {
 .wrapper a {
     text-decoration: none;
     font-size: 0.8rem;
-    color: #03A9F4;
+    color: #086fb2;
 }
 
 .wrapper a:hover {
@@ -103,27 +104,35 @@ body {
         margin: 30px 20px;
         padding: 40px 15px 15px 15px;
     }
+}h5.text-center.login-title {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+a.fogort-password {
+    position: relative;
+    top: 20px;
 }
 </style>
 <div class="wrapper">
         <div class="logo">
-            <img src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-bird-symbols-png-logo-0.png" alt="">
+            <img src="../../public/images/logo.jpg" alt="">
         </div>
         <div class="text-center mt-4 name">
-            Twitter
+           <h5 class="text-center login-title">Hệ thống quản lý giáo dục</h5>
         </div>
         <form class="p-3 mt-3">
             <div class="form-field d-flex align-items-center">
                 <span class="far fa-user"></span>
-                <input type="text" name="userName" id="userName" placeholder="Username">
+                <input type="text" name="userName" id="userName" placeholder="Tài khoản">
             </div>
             <div class="form-field d-flex align-items-center">
                 <span class="fas fa-key"></span>
-                <input type="password" name="password" id="pwd" placeholder="Password">
+                <input type="password" name="password" id="pwd" placeholder="Mật khẩu">
             </div>
-            <button class="btn mt-3">Login</button>
+            <button class="btn mt-3">Đăng nhập</button>
         </form>
         <div class="text-center fs-6">
-            <a href="#">Forget password?</a> or <a href="#">Sign up</a>
+            <a  class="fogort-password"href="#">Quên mật khẩu</a>
         </div>
     </div>
